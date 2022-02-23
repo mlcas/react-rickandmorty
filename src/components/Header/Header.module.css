@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;  /* es para que al agregar propiedades como el paddin,border no me aumento el tamaño de la pagina*/
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.header{
+ background-image: url(../../img/banner-cuatro.jpg);
+ height:150px;
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-position: center center;
+ margin-top:0px
+}
+.headerTexto{
+    text-align: center;
+    color: #fff;
+    margin-top: 20px;
+  
+    
+}
+
+
+@media(min-width:768px) {
+.header {
+    height:250px; 
+}
+.headerTexto{
+   font-size: 20px;
+  
+    
+}
+
+}
