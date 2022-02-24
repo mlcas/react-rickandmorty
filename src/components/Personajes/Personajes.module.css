@@ -1,0 +1,17 @@
+.contenedor{
+  
+    border: solid black 2px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #888888;
+}
+   
+.text{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2px
+}
+
+.img{
+    max-width: 300px;
+}

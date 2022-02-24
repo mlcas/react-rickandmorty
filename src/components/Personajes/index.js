@@ -1,18 +1,20 @@
-import React from 'react'
+import React from 'react';
+import styles from  './Personajes.module.css'
+
 
 const Personajes = (props) => {
+  console.log(props)
   return (
-    <>
-    <div>
+   
+  <div className={styles.contenedor} >
       <div>
-       <img  src={props.image}  alt="image" />
-       </div>
-       <div>
-      <p>{props.name}</p> 
+        <p  className={styles.text} >{props.name}</p> 
       </div>
-     
-    </div>
-    </>
+      <div>
+       <img className={styles.img}  src={props.image}  alt="image" />
+      </div> 
+  </div>
+   
   )
 }
 
