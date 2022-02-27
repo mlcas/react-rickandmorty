@@ -1,0 +1,23 @@
+.content{
+    background-color: black;
+   
+    
+ }
+ 
+.text{
+    color:#fff;
+    margin-left:5px
+}
+.imgContent{
+    border: solid black 2px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #888888;
+}
+
+@media(min-width:768px) {
+    .content{
+    display: flex;
+    justify-content: center;
+    }
+}

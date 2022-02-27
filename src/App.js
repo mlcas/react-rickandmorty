@@ -1,6 +1,9 @@
 import Header from './components/Header';
 import React, { useState, useEffect } from "react";
-import PersonajesInDb from './components/PersonajesInDb'
+import {  Route, Routes} from "react-router-dom";
+import PersonajesInDb from './components/PersonajesInDb';
+import Personaje from './components/Personaje';
+import Error from './components/Error';
 
 
 function App() {
@@ -11,7 +14,7 @@ function App() {
     fetch('https://rickandmortyapi.com/api/character')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+      
         setPersonajes(data.results)
     })
     .catch(error => {
@@ -25,7 +28,7 @@ function App() {
     fetch(`https://rickandmortyapi.com/api/character?page=${pagina}`)
     .then(response => response.json())
     .then(data => {
-      console.log(data);
+     
         setPersonajes(data.results)
     })
 
@@ -35,10 +38,13 @@ function App() {
   <Header
     cargarMasHandler={cargarMasHandler}
   />
+  <Routes>
+     <Route  path='/personaje/:id' element={<Personaje/>} />
+     <Route  path="/" element= {<PersonajesInDb  personajes={personajes}/>} />
+     <Route  path="*" element= {<Error/>} />
+     </Routes>
  
-  <PersonajesInDb
-    personajes={personajes}
-  />
+  
   </>
   )
 }
