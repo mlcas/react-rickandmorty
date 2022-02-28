@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import styles from './Header.module.css'
 
-const Header = ({cargarMasHandler}) => {
+const Header = ({cargarMasHandler,cargarMenosHandler }) => {
 
   return (
     
@@ -25,7 +25,8 @@ const Header = ({cargarMasHandler}) => {
     </div>
    
     <div className={styles.buttonContent}  >
-          <button className={styles.button}  onClick={cargarMasHandler}>Next Page</button>
+          <button className={styles.buttonLessPage}  onClick={cargarMenosHandler}>Prev Page</button>
+          <button className={styles.buttonAddPage}  onClick={cargarMasHandler}>Next Page</button>
       </div>
    
    </header>

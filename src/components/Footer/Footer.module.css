@@ -1,0 +1,30 @@
+.footer{
+    background-color:gray;
+    padding-top: 10px;
+}
+.footer h3 {
+    font-size: 15px;
+    color:white;
+    padding-left: 10px;
+}
+.footer-botton{
+    border-top:  solid 0.5px whitesmoke;
+    display: block; /* si no le pongo este display block no me toma el border-top*/
+    margin-top: 15px;
+}
+.footer-login{
+    text-decoration: none;
+}
+.privacity{
+    color: white;
+    font-size: 15px;
+
+    padding-left: 10px;
+}
+.all-icons{
+    margin-top: 15px ;
+}
+.icons{
+    font-size: 25px;
+    margin-bottom: 20px;
+}

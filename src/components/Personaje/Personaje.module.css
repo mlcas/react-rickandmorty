@@ -1,23 +1,27 @@
 .content{
-    background-color: black;
    
-    
+    text-align: center;
  }
  
 .text{
-    color:#fff;
-    margin-left:5px
+    color:black;
+    margin-left:5px;
+    margin-top: 15px;
 }
 .imgContent{
     border: solid black 2px;
     margin: 15px;
     border-radius: 5px;
-    box-shadow: 2px 3px 5px #888888;
+    box-shadow: 2px 3px 5px #050505;
+    max-width: 250px;
 }
 
 @media(min-width:768px) {
     .content{
     display: flex;
     justify-content: center;
+    }
+    .imgContent{
+        max-width: 300px;
     }
 }

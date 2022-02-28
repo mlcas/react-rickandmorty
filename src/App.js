@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import {  Route, Routes} from "react-router-dom";
 import PersonajesInDb from './components/PersonajesInDb';
 import Personaje from './components/Personaje';
+import Footer from './components/Footer'
 import Error from './components/Error';
 
 
@@ -31,20 +32,29 @@ function App() {
      
         setPersonajes(data.results)
     })
-
+  }
+  const cargarMenosHandler = async () => {
+    await setPagina(prevState => prevState - 1);
+    fetch(`https://rickandmortyapi.com/api/character?page=${pagina}`)
+    .then(response => response.json())
+    .then(data => {
+     
+        setPersonajes(data.results)
+    })
   }
   return (
     <>
   <Header
     cargarMasHandler={cargarMasHandler}
+    cargarMenosHandler={cargarMenosHandler}
   />
   <Routes>
      <Route  path='/personaje/:id' element={<Personaje/>} />
      <Route  path="/" element= {<PersonajesInDb  personajes={personajes}/>} />
      <Route  path="*" element= {<Error/>} />
-     </Routes>
- 
-  
+  </Routes>
+     
+  <Footer />
   </>
   )
 }
