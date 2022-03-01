@@ -13,7 +13,10 @@ const Header = ({cargarMasHandler,cargarMenosHandler }) => {
         <ul >
           <li>
           <Link  className={styles.navbar} to="/" >
-          <span className={styles.textNavbar} >Inicio</span>
+          <span className={styles.navbarInicio} >Inicio</span>
+          </Link>
+          <Link  className={styles.navbar} to="/personajes" >
+          <span className={styles.navbarPersonajes} >Personajes Vigentes</span>
           </Link>
             </li>
         </ul>

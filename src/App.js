@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import {  Route, Routes} from "react-router-dom";
 import PersonajesInDb from './components/PersonajesInDb';
 import Personaje from './components/Personaje';
+import EStadoPersonajes from './components/EstadoPersonajes';
 import Footer from './components/Footer'
 import Error from './components/Error';
 
@@ -42,6 +43,7 @@ function App() {
         setPersonajes(data.results)
     })
   }
+ 
   return (
     <>
   <Header
@@ -50,10 +52,11 @@ function App() {
   />
   <Routes>
      <Route  path='/personaje/:id' element={<Personaje/>} />
+     <Route  path="/personajes" element=  {<EStadoPersonajes personajes={personajes} />} />
      <Route  path="/" element= {<PersonajesInDb  personajes={personajes}/>} />
      <Route  path="*" element= {<Error/>} />
   </Routes>
-     
+    
   <Footer />
   </>
   )

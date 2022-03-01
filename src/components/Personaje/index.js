@@ -34,9 +34,9 @@ const Personaje = () => {
         </div>
         <div className={styles.textContent}>
           <h2 className={styles.text}> Nombre : <span>{character.name}</span></h2>
-          <p className={styles.text}>Especie : <span>{character.species}</span> </p>
-          <p className={styles.text}> Genero : <span>{character.gender}</span> </p>
-          <p className={styles.text}> Estado : <span>{character.status}</span> </p>
+          <h3 className={styles.text}>Especie : <span>{character.species}</span> </h3>
+          <h3 className={styles.text}> Genero : <span>{character.gender}</span> </h3>
+          <h3 className={styles.text}> Estado : <span>{character.status}</span> </h3>
           
         </div>
     </div>

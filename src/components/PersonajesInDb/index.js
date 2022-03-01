@@ -1,18 +1,11 @@
-
 import { Link } from "react-router-dom";
  import styles from './PersonajesInDb.module.css'
 
-
-
-
 const PersonajesInDb = ({personajes}) => {
   
-
- 
   return (
     <>
     <div className={styles.content}>
-      
          {
              personajes.map((personaje)=>{
                 return <div className={styles.contenedor} key={personaje.id} >
@@ -25,8 +18,6 @@ const PersonajesInDb = ({personajes}) => {
                               <img className={styles.img}  src={personaje.image}  alt="image" />
                           </div> 
                          </Link>
-
-
                 </div>  
                    })
           }

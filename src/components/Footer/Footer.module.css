@@ -1,19 +1,22 @@
 .footer{
     background-color:gray;
     padding-top: 10px;
+  
 }
 .footer h3 {
     font-size: 15px;
     color:white;
     padding-left: 10px;
+    text-decoration: none;
 }
+
 .footer-botton{
     border-top:  solid 0.5px whitesmoke;
     display: block; /* si no le pongo este display block no me toma el border-top*/
     margin-top: 15px;
 }
 .footer-login{
-    text-decoration: none;
+ text-decoration: none;
 }
 .privacity{
     color: white;
@@ -27,4 +30,15 @@
 .icons{
     font-size: 25px;
     margin-bottom: 20px;
+}
+@media(min-width:768px) {
+    .footer{
+        display: flex;
+    }
+    .piedepagina{
+        display: flex;
+    }
+    .bloque{
+        display: inline;/* me lo convierte de bloque a linea*/
+}
 }

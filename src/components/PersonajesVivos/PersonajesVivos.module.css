@@ -1,0 +1,19 @@
+.contenedor{
+    border: solid black 2px;
+    margin: 15px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px #050505;
+}
+.contenedor .img:hover{
+    transform: translateY(5px);
+    box-shadow: 0 12px 16px rgba(51, 4, 4, 0.384);
+}
+.text{
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2px
+}
+
+.img{
+    max-width: 250px;
+}
